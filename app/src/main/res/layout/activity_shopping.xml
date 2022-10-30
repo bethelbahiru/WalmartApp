@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ShoppingActivity">
+
+    <ImageView
+        android:id="@+id/dress"
+        android:layout_width="186dp"
+        android:layout_height="116dp"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/dress"
+        android:onClick="clothing"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.317" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="88dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/food"
+        android:layout_width="173dp"
+        android:layout_height="118dp"
+        android:onClick="food"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.121"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dress"
+        app:layout_constraintVertical_bias="0.464"
+        app:srcCompat="@drawable/food" />
+
+    <ImageView
+        android:id="@+id/electronics"
+        android:layout_width="153dp"
+        android:layout_height="145dp"
+        android:layout_marginTop="188dp"
+        android:onClick="electronics"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.714"
+        app:layout_constraintStart_toEndOf="@+id/dress"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/electronics" />
+
+    <ImageView
+        android:id="@+id/lipstick"
+        android:layout_width="164dp"
+        android:layout_height="136dp"
+        android:layout_marginEnd="16dp"
+        android:onClick="beauty"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/electronics"
+        app:layout_constraintVertical_bias="0.408"
+        app:srcCompat="@drawable/lipstick" />
+</androidx.constraintlayout.widget.ConstraintLayout>
