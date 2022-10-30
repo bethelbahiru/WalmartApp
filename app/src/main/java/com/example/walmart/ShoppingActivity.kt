@@ -14,7 +14,7 @@ class ShoppingActivity : AppCompatActivity() {
         val firstName = intent.getExtras()?.getString("firstName")
         val lastName = intent.getExtras()?.getString("lastName")
         val display = findViewById<TextView>(R.id.name)
-        display.setText(firstName + lastName)
+        display.setText("Welcome " + firstName + " " +lastName)
 
     }
 
@@ -23,14 +23,14 @@ class ShoppingActivity : AppCompatActivity() {
     }
 
     fun electronics(view: View) {
-        Toast.makeText(this, "You have selected Electronics Category", Toast.LENGTH_LONG).show()
+        Toast.makeText(view.context, "You have selected Electronics Category", Toast.LENGTH_LONG).show()
     }
 
     fun clothing(view: View) {
-        Toast.makeText(this, "You have selected Clothing Category", Toast.LENGTH_LONG).show()
+        Toast.makeText(view.context, "You have selected Clothing Category", Toast.LENGTH_LONG).show()
     }
 
     fun beauty(view: View) {
-        Toast.makeText(this, "You have selected Beauty Category", Toast.LENGTH_LONG).show()
+        Toast.makeText(view.context, "You have selected Beauty Category", Toast.LENGTH_LONG).show()
     }
 }

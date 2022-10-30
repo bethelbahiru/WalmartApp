@@ -52,8 +52,8 @@ class MainActivity : AppCompatActivity() {
 
     fun signIn(view: View) {
         val intent = Intent(this, ShoppingActivity::class.java)
-        val userName = findViewById<TextInputEditText>(R.id.textEmail)
-        val pwd = findViewById<TextInputEditText>(R.id.textPswd)
+        val userName = findViewById<TextInputLayout>(R.id.emailDisplay).editText?.text.toString()
+        val pwd = findViewById<TextInputLayout>(R.id.pwdDisplay).editText?.text.toString()
         val bundle = Bundle();
         var authenticated = false;
 
@@ -72,12 +72,19 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun forgotPassword(view: View) {
-        val email = findViewById<TextInputEditText>(R.id.textEmail)
+        val email = findViewById<TextInputLayout>(R.id.emailDisplay).editText?.text.toString()
         for(item in arrayOfUsers) {
             if(item.userName?.equals(email) == true) {
                 Toast.makeText(this, "Account Found. Password is " + item.password , Toast.LENGTH_LONG).show()
+                break
             }
         }
+    }
+
+
+    fun create(view: View) {
+        val intent = Intent(this, NewUser::class.java)
+        startActivity(intent)
     }
 
 

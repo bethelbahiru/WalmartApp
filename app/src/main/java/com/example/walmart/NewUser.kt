@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import com.google.android.material.textfield.TextInputEditText
+import com.google.android.material.textfield.TextInputLayout
 
 
 class NewUser : AppCompatActivity() {
@@ -17,10 +18,10 @@ class NewUser : AppCompatActivity() {
     }
 
     fun create(view: View) {
-        var fName = findViewById<TextInputEditText>(R.id.firstName)?.text.toString()
-        var lName = findViewById<TextInputEditText>(R.id.lastName)?.text.toString()
-        var newEmail = findViewById<TextInputEditText>(R.id.textEmail).toString()
-        var newPass = findViewById<TextInputEditText>(R.id.textPwd)?.text.toString()
+        var fName = findViewById<TextInputLayout>(R.id.first)?.editText?.text.toString()
+        var lName = findViewById<TextInputLayout>(R.id.last)?.editText?.text.toString()
+        var newEmail = findViewById<TextInputLayout>(R.id.emailDisplay).editText?.text.toString()
+        var newPass = findViewById<TextInputLayout>(R.id.pwdDisplay)?.editText?.text.toString()
 
         if (fName != "" && lName != "" && newEmail != "" && newPass != "")
             Toast.makeText(this, "Account Created Successfully", Toast.LENGTH_LONG).show()
